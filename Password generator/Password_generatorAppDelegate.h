@@ -13,8 +13,6 @@
 {
   IBOutlet NSTextView* theTextView;
   
-@private
-  NSWindow *window;
 }
 
 @property (assign) IBOutlet NSWindow *window;

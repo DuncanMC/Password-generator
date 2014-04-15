@@ -26,8 +26,6 @@
 
 + (NSString*) applicationDocumentsDirectory;
 
-+ (void) alertWithMessage: (NSString*) message 
-										title: (NSString*) title;
 
 //-----------------------------------------------------------------------------------------------------------
 #pragma mark -
@@ -35,6 +33,6 @@
 //-----------------------------------------------------------------------------------------------------------
 - (void) loadWordList;
 
-- (void) onetimeSetup;
+- (BOOL) onetimeSetup;
 
 @end

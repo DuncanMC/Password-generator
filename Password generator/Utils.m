@@ -8,6 +8,13 @@
 //
 
 #import "Utils.h"
+
+#if TARGET_OS_IPHONE
+  #import "Utils_iOS.h"
+#else
+  #import "UtilsMacOS.h"
+#endif
+
 #import "DataContainerSingleton.h"
 
 
@@ -34,16 +41,6 @@ static Utils* _theUtils = nil;
 
 //-----------------------------------------------------------------------------------------------------------
 
-+ (void) alertWithMessage: (NSString*) message 
-										title: (NSString*) title;
-{
-	NSAlert* alert = [NSAlert alertWithMessageText: title 
-																	 defaultButton: nil 
-																 alternateButton: nil 
-																		 otherButton: nil 
-											 informativeTextWithFormat: message];
-	[alert runModal];
-}
 
 //-----------------------------------------------------------------------------------------------------------
 
@@ -67,8 +64,13 @@ static Utils* _theUtils = nil;
                                            errorDescription:&error];
   if(!plist)
   {
-    [Utils alertWithMessage: @"The words list file 'wordsEn.txt' can't be found in the app bundle."
+#if TARGET_OS_IPHONE
+    [Utils_iOS alertWithMessage: @"The words list file 'wordsEn.txt' can't be found in the app bundle."
+                           title: @"Words list file not found"];
+#else
+    [UtilsMacOS alertWithMessage: @"The words list file 'wordsEn.txt' can't be found in the app bundle."
                       title: @"Words list file not found"];
+#endif
   }
   [DataContainerSingleton theDataContainerSingleton].wordList = plist; 
 }
@@ -88,7 +90,7 @@ file into the project  in the "resources" or "supporting files" folder, and clic
  need to download it from the above site and put it in your documents directory before running the program.
  */
  
-- (void) onetimeSetup;
+- (BOOL) onetimeSetup;
 {
   NSError* result;
   NSString* resultString;
@@ -100,9 +102,15 @@ file into the project  in the "resources" or "supporting files" folder, and clic
   NSString* wordsString = [NSString stringWithContentsOfFile: wordsTextPath encoding: NSUTF8StringEncoding error: &result];
   if (!wordsString)
 	{
-		[Utils alertWithMessage: [NSString stringWithFormat: @"Unable to find file %@. \nYou need to download the file 'wordsEn.txt' from the website \nhttp://www.sil.org/linguistics/wordlists/english/#EnglishWordlist\n and place it in your documents directory.", wordsTextPath]
+#if TARGET_OS_IPHONE
+		[Utils_iOS alertWithMessage: [NSString stringWithFormat: @"Unable to find file %@. \nYou need to download the file 'wordsEn.txt' from the website \nhttp://www.sil.org/linguistics/wordlists/english/#EnglishWordlist\n and place it in your documents directory.", wordsTextPath]
+                           title: @"Can't find file"];
+    return NO;
+#else
+		[UtilsMacOS alertWithMessage: [NSString stringWithFormat: @"Unable to find file %@. \nYou need to download the file 'wordsEn.txt' from the website \nhttp://www.sil.org/linguistics/wordlists/english/#EnglishWordlist\n and place it in your documents directory.", wordsTextPath]
 											title: @"Can't find file"];
 		exit(0);
+#endif
 	}
 /*
 The following line breaks the words list file into an array of string objects. The file must be in Windows format,
@@ -110,7 +118,7 @@ Because each line ends with a CR/LF (or "\r\n". If you are parsing a different w
 The string @"\r\n" to @"\n" (linefeed) or @"\r" (carriage return).
 */
   NSArray* wordsArray = [wordsString componentsSeparatedByString: @"\r\n"];
-  NSLog(@"Array count = %lu", [wordsArray count]);
+  NSLog(@"Array count = %lu", (unsigned long)[wordsArray count]);
   
   plistData = [NSPropertyListSerialization dataFromPropertyList: wordsArray
                                                          format: NSPropertyListBinaryFormat_v1_0
@@ -123,16 +131,19 @@ The string @"\r\n" to @"\n" (linefeed) or @"\r" (carriage return).
     NSError* result;
     if (![plistData writeToFile: path options: 0 error: &result])
 		{
-			[Utils alertWithMessage: [NSString stringWithFormat: @"Error writing plist file to path \"%@\"", path]
+#if TARGET_OS_IPHONE
+#else
+			[UtilsMacOS alertWithMessage: [NSString stringWithFormat: @"Error writing plist file to path \"%@\"", path]
 												title: @"Unable to save file"];
+#endif
 			exit(0);
 		}
 	}
 	else
 	{
 		NSLog(@"%@",resultString);
-		[resultString release];
 	}
+  return YES;
 }
 	
 //-----------------------------------------------------------------------------------------------------------
@@ -151,7 +162,6 @@ The string @"\r\n" to @"\n" (linefeed) or @"\r" (carriage return).
 
 - (void)dealloc
 {
-    [super dealloc];
 }
 
 @end

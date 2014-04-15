@@ -9,6 +9,7 @@
 
 #import "Password_generatorAppDelegate.h"
 #import "Utils.h"
+#import "UtilsMacOS.h"
 #import "DataContainerSingleton.h"
 
 @implementation Password_generatorAppDelegate
@@ -24,7 +25,7 @@
   if (TRUE)
   {
   [theUtils onetimeSetup];
-		[Utils alertWithMessage: @"The word list file has been converted to a plist. Now copy the file 'wordlist.plist' into the project's supporting files group and change the line 'if (TRUE)' to 'if (FALSE)' In the file Password_generatorAppDelegate.m'."
+		[UtilsMacOS alertWithMessage: @"The word list file has been converted to a plist. Now copy the file 'wordlist.plist' into the project's supporting files group and change the line 'if (TRUE)' to 'if (FALSE)' In the file Password_generatorAppDelegate.m'."
 											title: @"Plist file generated."];
 
   exit(0);

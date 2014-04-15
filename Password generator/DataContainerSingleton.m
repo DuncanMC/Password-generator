@@ -44,7 +44,6 @@ static DataContainerSingleton* _theDataContainerSingleton = nil;
 
 - (void)dealloc
 {
-    [super dealloc];
 }
 
 @end
