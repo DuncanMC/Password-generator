@@ -17,8 +17,6 @@
 		AE9CBA7C137BFF8C00CA97E1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE9CBA7A137BFF8C00CA97E1 /* MainMenu.xib */; };
 		AE9CBA84137BFFCC00CA97E1 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9CBA83137BFFCC00CA97E1 /* Utils.m */; };
 		AE9CBA87137C00AE00CA97E1 /* DataContainerSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9CBA86137C00AE00CA97E1 /* DataContainerSingleton.m */; };
-		AEB9A1F018FF25D200151391 /* wordsEn.txt in Resources */ = {isa = PBXBuildFile; fileRef = AEE80CE218FED6350083212F /* wordsEn.txt */; };
-		AEB9A1F118FF25D200151391 /* wordsEn.txt in Resources */ = {isa = PBXBuildFile; fileRef = AEE80CE218FED6350083212F /* wordsEn.txt */; };
 		AEB9A1F518FF285D00151391 /* wordlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = AEB9A1F218FF277C00151391 /* wordlist.plist */; };
 		AEB9A1F618FF285D00151391 /* wordlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = AEB9A1F218FF277C00151391 /* wordlist.plist */; };
 		AECACF0918FDC6DA00D14B22 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AECACF0818FDC6DA00D14B22 /* Foundation.framework */; };
@@ -284,7 +282,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE6E668418FF0C5F0086886A /* Images.xcassets in Resources */,
-				AEB9A1F018FF25D200151391 /* wordsEn.txt in Resources */,
 				AEB9A1F518FF285D00151391 /* wordlist.plist in Resources */,
 				AE9CBA70137BFF8C00CA97E1 /* InfoPlist.strings in Resources */,
 				AEE80CE418FEDDB90083212F /* Wordlist_copyright.txt in Resources */,
@@ -301,7 +298,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEE80CE518FEDDB90083212F /* Wordlist_copyright.txt in Resources */,
-				AEB9A1F118FF25D200151391 /* wordsEn.txt in Resources */,
 				AECACF2118FDC6DA00D14B22 /* Images.xcassets in Resources */,
 				AEB9A1F618FF285D00151391 /* wordlist.plist in Resources */,
 				AECACF1318FDC6DA00D14B22 /* InfoPlist.strings in Resources */,
