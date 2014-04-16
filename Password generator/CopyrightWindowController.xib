@@ -18,27 +18,27 @@
             <windowPositionMask key="initialPositionMask" topStrut="YES"/>
             <rect key="contentRect" x="656" y="423" width="1200" height="700"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
-            <value key="maxSize" type="size" width="1200" height="700"/>
+            <value key="minSize" type="size" width="500" height="400"/>
             <view key="contentView" id="se5-gp-TjO">
                 <rect key="frame" x="0.0" y="0.0" width="1200" height="700"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="ZIK-TP-bg1">
-                        <rect key="frame" x="10" y="10" width="1182" height="682"/>
+                        <rect key="frame" x="10" y="10" width="1182" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <clipView key="contentView" id="4s3-JZ-1Lb">
-                            <rect key="frame" x="1" y="1" width="1165" height="680"/>
+                            <rect key="frame" x="1" y="1" width="1165" height="566"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <textView importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="Acf-hq-nUa">
-                                    <rect key="frame" x="0.0" y="0.0" width="1165" height="680"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1165" height="566"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="1165" height="680"/>
-                                    <size key="maxSize" width="1165" height="10000000"/>
+                                    <size key="minSize" width="1165" height="566"/>
+                                    <size key="maxSize" width="1182" height="10000000"/>
                                     <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="1165" height="680"/>
-                                    <size key="maxSize" width="1165" height="10000000"/>
+                                    <size key="minSize" width="1165" height="566"/>
+                                    <size key="maxSize" width="1182" height="10000000"/>
                                 </textView>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -48,10 +48,24 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="flC-nL-U76">
-                            <rect key="frame" x="1166" y="1" width="15" height="680"/>
+                            <rect key="frame" x="1166" y="1" width="15" height="566"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="rYN-ek-Bg0">
+                        <rect key="frame" x="471" y="655" width="257" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Random Password Generator Created by" id="3TY-YQ-Aa2">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="0EW-3m-Qxf">
+                        <rect key="frame" x="573" y="593" width="54" height="54"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Wareto Logo 60x60" id="AkQ-Le-1LL"/>
+                    </imageView>
                 </subviews>
             </view>
             <connections>
@@ -59,4 +73,7 @@
             </connections>
         </window>
     </objects>
+    <resources>
+        <image name="Wareto Logo 60x60" width="60" height="60"/>
+    </resources>
 </document>

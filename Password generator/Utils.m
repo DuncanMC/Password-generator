@@ -199,11 +199,33 @@ file into the project  in the "resources" or "supporting files" folder, and clic
 #endif
 	}
 /*
-The following line breaks the words list file into an array of string objects. The file must be in Windows format,
+The following code breaks the words list file into an array of string objects. The file must be in Windows format,
 Because each line ends with a CR/LF (or "\r\n". If you are parsing a different word list, you might need to change
 The string @"\r\n" to @"\n" (linefeed) or @"\r" (carriage return).
 */
-  NSArray* wordsArray = [wordsString componentsSeparatedByString: @"\r\n"];
+  
+  NSString *eol;
+  
+  //First try CR/LF
+  eol = @"\r\n";
+  NSArray* wordsArray;
+  wordsArray = [wordsString componentsSeparatedByString: eol];
+  
+  
+  if (wordsArray.count <2)
+  {
+    //Try just LF
+    eol = @"\n";
+    wordsArray = [wordsString componentsSeparatedByString: eol];
+
+  }
+  if (wordsArray.count <2)
+  {
+    //Try just CR
+    eol = @"\r";
+    wordsArray = [wordsString componentsSeparatedByString: eol];
+  }
+  
   NSMutableArray *editedWordsArray = [NSMutableArray arrayWithCapacity: wordsArray.count];
   for (NSString *aWord in wordsArray)
   {
@@ -215,6 +237,16 @@ The string @"\r\n" to @"\n" (linefeed) or @"\r" (carriage return).
     }
   }
   NSLog(@"Original Array count = %lu. after removing \"unusal plurals\", count = %lu.", (unsigned long)[wordsArray count], (unsigned long)editedWordsArray.count);
+  
+  if (wordsArray.count != editedWordsArray.count)
+  {
+    NSString *editedWordsList = [editedWordsArray componentsJoinedByString: eol ];
+    NSString *editedWordPath = [documentsDir stringByAppendingPathComponent: @"wordsEn.txt"];
+    [editedWordsList writeToFile: editedWordPath atomically: YES encoding: NSASCIIStringEncoding error: nil];
+    
+    NSLog(@"Wrote edited list to %@", editedWordPath);
+  }
+  
   
   plistData = [NSPropertyListSerialization dataFromPropertyList: editedWordsArray
                                                          format: NSPropertyListBinaryFormat_v1_0
@@ -230,10 +262,9 @@ The string @"\r\n" to @"\n" (linefeed) or @"\r" (carriage return).
 			[Utils alertWithMessage: [NSString stringWithFormat: @"Error writing plist file to path \"%@\"", path]
 												title: @"Unable to save file"
                      delegate: nil];
-#if !TARGET_OS_IPHONE
 			exit(0);
-#endif
 		}
+    NSLog(@"Wrote plist file to %@", path);
 	}
 	else
 	{
