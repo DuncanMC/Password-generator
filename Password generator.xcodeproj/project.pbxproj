@@ -26,12 +26,19 @@
 		AECACF2118FDC6DA00D14B22 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AECACF2018FDC6DA00D14B22 /* Images.xcassets */; };
 		AECACF3B18FDC82E00D14B22 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9CBA83137BFFCC00CA97E1 /* Utils.m */; };
 		AECACF3C18FDC89B00D14B22 /* DataContainerSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9CBA86137C00AE00CA97E1 /* DataContainerSingleton.m */; };
-		AECACF3F18FDC98800D14B22 /* UtilsMacOS.m in Sources */ = {isa = PBXBuildFile; fileRef = AECACF3E18FDC98800D14B22 /* UtilsMacOS.m */; };
-		AECACF4318FDCA4C00D14B22 /* Utils_iOS.m in Sources */ = {isa = PBXBuildFile; fileRef = AECACF4118FDC9E400D14B22 /* Utils_iOS.m */; };
+		AECACF4B18FDDCD400D14B22 /* window.xib in Resources */ = {isa = PBXBuildFile; fileRef = AECACF4A18FDDCD400D14B22 /* window.xib */; };
+		AEE80CE418FEDDB90083212F /* Wordlist_copyright.txt in Resources */ = {isa = PBXBuildFile; fileRef = AEE80CE318FEDDB90083212F /* Wordlist_copyright.txt */; };
+		AEE80CE518FEDDB90083212F /* Wordlist_copyright.txt in Resources */ = {isa = PBXBuildFile; fileRef = AEE80CE318FEDDB90083212F /* Wordlist_copyright.txt */; };
+		AEE80CE918FEDDEB0083212F /* CopyrightInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE80CE718FEDDEB0083212F /* CopyrightInfoVC.m */; };
+		AEE80CED18FEE6DF0083212F /* wordlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = AEE80CEC18FEE6DF0083212F /* wordlist.plist */; };
+		AEE80CEE18FEE6DF0083212F /* wordlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = AEE80CEC18FEE6DF0083212F /* wordlist.plist */; };
+		AEE80CF218FEE7E70083212F /* CopyrightWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE80CF018FEE7E70083212F /* CopyrightWindowController.m */; };
+		AEE80CF418FEE7E70083212F /* CopyrightWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEE80CF118FEE7E70083212F /* CopyrightWindowController.xib */; };
+		AEE80CF518FEE7E70083212F /* CopyrightWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEE80CF118FEE7E70083212F /* CopyrightWindowController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AE9CBA61137BFF8C00CA97E1 /* Password generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Password generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE9CBA61137BFF8C00CA97E1 /* Password generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Password generator.app"; path = "Password Generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE9CBA65137BFF8C00CA97E1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		AE9CBA68137BFF8C00CA97E1 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		AE9CBA69137BFF8C00CA97E1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -48,7 +55,7 @@
 		AE9CBA83137BFFCC00CA97E1 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utils.m; path = "Password generator/Utils.m"; sourceTree = "<group>"; };
 		AE9CBA85137C00AE00CA97E1 /* DataContainerSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataContainerSingleton.h; path = "Password generator/DataContainerSingleton.h"; sourceTree = "<group>"; };
 		AE9CBA86137C00AE00CA97E1 /* DataContainerSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataContainerSingleton.m; path = "Password generator/DataContainerSingleton.m"; sourceTree = "<group>"; };
-		AECACF0718FDC6DA00D14B22 /* Password generator_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Password generator_iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AECACF0718FDC6DA00D14B22 /* Passwords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Passwords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AECACF0818FDC6DA00D14B22 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AECACF0A18FDC6DA00D14B22 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		AECACF0C18FDC6DA00D14B22 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -63,10 +70,16 @@
 		AECACF1E18FDC6DA00D14B22 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		AECACF2018FDC6DA00D14B22 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AECACF2718FDC6DB00D14B22 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		AECACF3D18FDC98800D14B22 /* UtilsMacOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilsMacOS.h; sourceTree = "<group>"; };
-		AECACF3E18FDC98800D14B22 /* UtilsMacOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UtilsMacOS.m; sourceTree = "<group>"; };
-		AECACF4018FDC9E400D14B22 /* Utils_iOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils_iOS.h; path = "../Password generator/Utils_iOS.h"; sourceTree = "<group>"; };
-		AECACF4118FDC9E400D14B22 /* Utils_iOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utils_iOS.m; path = "../Password generator/Utils_iOS.m"; sourceTree = "<group>"; };
+		AECACF4A18FDDCD400D14B22 /* window.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = window.xib; sourceTree = "<group>"; };
+		AECACF4C18FEC1E100D14B22 /* defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = defines.h; sourceTree = "<group>"; };
+		AEE80CE218FED6350083212F /* wordsEn.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = wordsEn.txt; sourceTree = "<group>"; };
+		AEE80CE318FEDDB90083212F /* Wordlist_copyright.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Wordlist_copyright.txt; sourceTree = "<group>"; };
+		AEE80CE618FEDDEB0083212F /* CopyrightInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CopyrightInfoVC.h; sourceTree = "<group>"; };
+		AEE80CE718FEDDEB0083212F /* CopyrightInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CopyrightInfoVC.m; sourceTree = "<group>"; };
+		AEE80CEC18FEE6DF0083212F /* wordlist.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = wordlist.plist; sourceTree = "<group>"; };
+		AEE80CEF18FEE7E70083212F /* CopyrightWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CopyrightWindowController.h; sourceTree = "<group>"; };
+		AEE80CF018FEE7E70083212F /* CopyrightWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CopyrightWindowController.m; sourceTree = "<group>"; };
+		AEE80CF118FEE7E70083212F /* CopyrightWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CopyrightWindowController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +107,14 @@
 		AE9CBA56137BFF8C00CA97E1 = {
 			isa = PBXGroup;
 			children = (
+				AECACF4C18FEC1E100D14B22 /* defines.h */,
 				AE9CBA82137BFFCC00CA97E1 /* Utils.h */,
 				AE9CBA83137BFFCC00CA97E1 /* Utils.m */,
 				AE9CBA85137C00AE00CA97E1 /* DataContainerSingleton.h */,
 				AE9CBA86137C00AE00CA97E1 /* DataContainerSingleton.m */,
+				AEE80CE318FEDDB90083212F /* Wordlist_copyright.txt */,
+				AEE80CE218FED6350083212F /* wordsEn.txt */,
+				AEE80CEC18FEE6DF0083212F /* wordlist.plist */,
 				AE9CBA6B137BFF8C00CA97E1 /* Password generator */,
 				AECACF0E18FDC6DA00D14B22 /* Password generator_iOS */,
 				AE9CBA64137BFF8C00CA97E1 /* Frameworks */,
@@ -109,7 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				AE9CBA61137BFF8C00CA97E1 /* Password generator.app */,
-				AECACF0718FDC6DA00D14B22 /* Password generator_iOS.app */,
+				AECACF0718FDC6DA00D14B22 /* Passwords.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,11 +157,13 @@
 		AE9CBA6B137BFF8C00CA97E1 /* Password generator */ = {
 			isa = PBXGroup;
 			children = (
-				AECACF3D18FDC98800D14B22 /* UtilsMacOS.h */,
-				AECACF3E18FDC98800D14B22 /* UtilsMacOS.m */,
 				AE9CBA77137BFF8C00CA97E1 /* Password_generatorAppDelegate.h */,
 				AE9CBA78137BFF8C00CA97E1 /* Password_generatorAppDelegate.m */,
 				AE9CBA7A137BFF8C00CA97E1 /* MainMenu.xib */,
+				AECACF4A18FDDCD400D14B22 /* window.xib */,
+				AEE80CEF18FEE7E70083212F /* CopyrightWindowController.h */,
+				AEE80CF018FEE7E70083212F /* CopyrightWindowController.m */,
+				AEE80CF118FEE7E70083212F /* CopyrightWindowController.xib */,
 				AE9CBA6C137BFF8C00CA97E1 /* Supporting Files */,
 			);
 			path = "Password generator";
@@ -165,13 +184,13 @@
 		AECACF0E18FDC6DA00D14B22 /* Password generator_iOS */ = {
 			isa = PBXGroup;
 			children = (
-				AECACF4018FDC9E400D14B22 /* Utils_iOS.h */,
-				AECACF4118FDC9E400D14B22 /* Utils_iOS.m */,
 				AECACF1718FDC6DA00D14B22 /* AppDelegate.h */,
 				AECACF1818FDC6DA00D14B22 /* AppDelegate.m */,
 				AECACF1A18FDC6DA00D14B22 /* Main.storyboard */,
 				AECACF1D18FDC6DA00D14B22 /* ViewController.h */,
 				AECACF1E18FDC6DA00D14B22 /* ViewController.m */,
+				AEE80CE618FEDDEB0083212F /* CopyrightInfoVC.h */,
+				AEE80CE718FEDDEB0083212F /* CopyrightInfoVC.m */,
 				AECACF2018FDC6DA00D14B22 /* Images.xcassets */,
 				AECACF0F18FDC6DA00D14B22 /* Supporting Files */,
 			);
@@ -192,9 +211,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AE9CBA60137BFF8C00CA97E1 /* Password generator */ = {
+		AE9CBA60137BFF8C00CA97E1 /* Password Generator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AE9CBA7F137BFF8C00CA97E1 /* Build configuration list for PBXNativeTarget "Password generator" */;
+			buildConfigurationList = AE9CBA7F137BFF8C00CA97E1 /* Build configuration list for PBXNativeTarget "Password Generator" */;
 			buildPhases = (
 				AE9CBA5D137BFF8C00CA97E1 /* Sources */,
 				AE9CBA5E137BFF8C00CA97E1 /* Frameworks */,
@@ -204,14 +223,14 @@
 			);
 			dependencies = (
 			);
-			name = "Password generator";
+			name = "Password Generator";
 			productName = "Password generator";
 			productReference = AE9CBA61137BFF8C00CA97E1 /* Password generator.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AECACF0618FDC6DA00D14B22 /* Password generator_iOS */ = {
+		AECACF0618FDC6DA00D14B22 /* Passwords */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AECACF3518FDC6DB00D14B22 /* Build configuration list for PBXNativeTarget "Password generator_iOS" */;
+			buildConfigurationList = AECACF3518FDC6DB00D14B22 /* Build configuration list for PBXNativeTarget "Passwords" */;
 			buildPhases = (
 				AECACF0318FDC6DA00D14B22 /* Sources */,
 				AECACF0418FDC6DA00D14B22 /* Frameworks */,
@@ -221,9 +240,9 @@
 			);
 			dependencies = (
 			);
-			name = "Password generator_iOS";
+			name = Passwords;
 			productName = "Password generator_iOS";
-			productReference = AECACF0718FDC6DA00D14B22 /* Password generator_iOS.app */;
+			productReference = AECACF0718FDC6DA00D14B22 /* Passwords.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -247,8 +266,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AE9CBA60137BFF8C00CA97E1 /* Password generator */,
-				AECACF0618FDC6DA00D14B22 /* Password generator_iOS */,
+				AE9CBA60137BFF8C00CA97E1 /* Password Generator */,
+				AECACF0618FDC6DA00D14B22 /* Passwords */,
 			);
 		};
 /* End PBXProject section */
@@ -259,6 +278,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE9CBA70137BFF8C00CA97E1 /* InfoPlist.strings in Resources */,
+				AEE80CE418FEDDB90083212F /* Wordlist_copyright.txt in Resources */,
+				AEE80CF418FEE7E70083212F /* CopyrightWindowController.xib in Resources */,
+				AEE80CED18FEE6DF0083212F /* wordlist.plist in Resources */,
+				AECACF4B18FDDCD400D14B22 /* window.xib in Resources */,
 				AE9CBA76137BFF8C00CA97E1 /* Credits.rtf in Resources */,
 				AE9CBA7C137BFF8C00CA97E1 /* MainMenu.xib in Resources */,
 			);
@@ -268,9 +291,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEE80CE518FEDDB90083212F /* Wordlist_copyright.txt in Resources */,
 				AECACF2118FDC6DA00D14B22 /* Images.xcassets in Resources */,
+				AEE80CEE18FEE6DF0083212F /* wordlist.plist in Resources */,
 				AECACF1318FDC6DA00D14B22 /* InfoPlist.strings in Resources */,
 				AECACF1C18FDC6DA00D14B22 /* Main.storyboard in Resources */,
+				AEE80CF518FEE7E70083212F /* CopyrightWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,11 +307,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AECACF3F18FDC98800D14B22 /* UtilsMacOS.m in Sources */,
 				AE9CBA73137BFF8C00CA97E1 /* main.m in Sources */,
 				AE9CBA79137BFF8C00CA97E1 /* Password_generatorAppDelegate.m in Sources */,
 				AE9CBA84137BFFCC00CA97E1 /* Utils.m in Sources */,
 				AE9CBA87137C00AE00CA97E1 /* DataContainerSingleton.m in Sources */,
+				AEE80CF218FEE7E70083212F /* CopyrightWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,8 +323,8 @@
 				AECACF3C18FDC89B00D14B22 /* DataContainerSingleton.m in Sources */,
 				AECACF1918FDC6DA00D14B22 /* AppDelegate.m in Sources */,
 				AECACF1518FDC6DA00D14B22 /* main.m in Sources */,
+				AEE80CE918FEDDEB0083212F /* CopyrightInfoVC.m in Sources */,
 				AECACF3B18FDC82E00D14B22 /* Utils.m in Sources */,
-				AECACF4318FDCA4C00D14B22 /* Utils_iOS.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +377,7 @@
 		AE9CBA7D137BFF8C00CA97E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -377,6 +404,7 @@
 		AE9CBA7E137BFF8C00CA97E1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -458,7 +486,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = "Password generator_iOS/Password generator_iOS-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = app;
@@ -489,7 +517,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = "Password generator_iOS/Password generator_iOS-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -509,7 +537,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AE9CBA7F137BFF8C00CA97E1 /* Build configuration list for PBXNativeTarget "Password generator" */ = {
+		AE9CBA7F137BFF8C00CA97E1 /* Build configuration list for PBXNativeTarget "Password Generator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AE9CBA80137BFF8C00CA97E1 /* Debug */,
@@ -518,13 +546,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AECACF3518FDC6DB00D14B22 /* Build configuration list for PBXNativeTarget "Password generator_iOS" */ = {
+		AECACF3518FDC6DB00D14B22 /* Build configuration list for PBXNativeTarget "Passwords" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AECACF3618FDC6DB00D14B22 /* Debug */,
 				AECACF3718FDC6DB00D14B22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

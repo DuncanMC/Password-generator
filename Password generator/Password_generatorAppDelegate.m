@@ -9,50 +9,86 @@
 
 #import "Password_generatorAppDelegate.h"
 #import "Utils.h"
-#import "UtilsMacOS.h"
 #import "DataContainerSingleton.h"
+#import "CopyrightWindowController.h"
 
 @implementation Password_generatorAppDelegate
 
 @synthesize window;
 
+
+//-----------------------------------------------------------------------------------------------------------
+
+- (IBAction) make_passwords: (id) sender;
+{
+  if (![DataContainerSingleton theDataContainerSingleton].wordList)
+    exit(0);
+  
+  NSString* input = [valueField stringValue];
+  NSUInteger count = [input intValue];
+  
+  NSUInteger textViewStringLength = theTextView.string.length;
+  
+  if (textViewStringLength == 0)
+  {
+    [theTextView insertText: @"Passwords:\n\n"];
+    textViewStringLength = theTextView.string.length;
+  }
+
+  if (count >0)
+  {
+    NSString *result = [Utils create_n_passwords:count];
+    [theTextView setSelectedRange: NSMakeRange(textViewStringLength,  1)];
+    [theTextView insertText: result];
+  }
+  else
+    NSLog(@"count < 1!");
+}
+
+
+//-----------------------------------------------------------------------------------------------------------
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+   windowWillCloseHandler = [[NSNotificationCenter defaultCenter] addObserverForName: NSWindowWillCloseNotification
+   
+   object: nil
+   queue: nil
+   usingBlock: ^(NSNotification *note)
+   {
+     NSWindow *windowToClose = (NSWindow *) note.object;
+     if (windowToClose == theCopyrightWindowController.window)
+       theCopyrightWindowController = nil;
+     NSLog(@"In windowWillCloseHandler. Notificaiton object= %@", note.object);
+   }
+                             ];
+  
+  NSString *plistPath = nil;
   // Insert code here to initialize your application
   Utils* theUtils = [Utils theUtils];
   
-  //Change the line below to "if (FALSE)" once the plist file has been built.
-  if (TRUE)
+  if (![[Utils theUtils] loadWordList])
   {
-  [theUtils onetimeSetup];
-		[UtilsMacOS alertWithMessage: @"The word list file has been converted to a plist. Now copy the file 'wordlist.plist' into the project's supporting files group and change the line 'if (TRUE)' to 'if (FALSE)' In the file Password_generatorAppDelegate.m'."
-											title: @"Plist file generated."];
+    plistPath = [theUtils createWordsPlist];
+    NSString *message = [NSString stringWithFormat: @"The word list file has been converted to a plist. Now copy the file \"%@\" into the project's supporting files group and remove the file wordlist.txt.",
+                         plistPath];
+		[Utils alertWithMessage: message
+											title: @"Plist file generated."
+                   delegate: nil];
+    NSLog(@"%@", message);
 
   exit(0);
   }
-  [theUtils loadWordList];
-  NSArray* wordList = [DataContainerSingleton theDataContainerSingleton].wordList;
-  
-  int index;
-  int randVal;
-  NSUInteger wordCount = [wordList count];
-  NSString* word1;
-  NSString* word2;
-  NSString* line;
-  NSMutableString* output = [NSMutableString stringWithCapacity: 100];
-  [output appendString: @"Passwords:\n\n"];
-  for (index = 0; index<5; index++)
-  {
-    word1 = [wordList objectAtIndex: arc4random() % wordCount];
-    word2 = [wordList objectAtIndex: arc4random() % wordCount];
-    randVal = arc4random() % 99 + 1;
-    line = [NSString stringWithFormat: @"%@%d%@\n", word1, randVal, word2];
-    NSLog(@"Line = %@", line);
-    [output appendString: line];
-  }
-  [theTextView insertText: output];
-  NSLog(@"Passwords: \n%@", output);
-  
+  if (![NSBundle loadNibNamed: @"window" owner: self])
+    NSLog(@"Error loading nib");
+
+  [self make_passwords: nil];
 }
 
+//-----------------------------------------------------------------------------------------------------------
+
+- (IBAction)handleHelpButton:(id)sender
+{
+  theCopyrightWindowController = [[CopyrightWindowController alloc] initWithWindowNibName: @"CopyrightWindowController"];
+  [theCopyrightWindowController showWindow:nil];
+}
 @end

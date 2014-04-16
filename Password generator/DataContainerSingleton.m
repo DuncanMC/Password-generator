@@ -17,8 +17,7 @@
 static DataContainerSingleton* _theDataContainerSingleton = nil;
 
 //-----------------------------------------------------------------------------------------------------------
-#pragma mark -
-#pragma mark	Class methods
+#pragma mark - Class methods
 //-----------------------------------------------------------------------------------------------------------
 
 + (DataContainerSingleton*) theDataContainerSingleton;
@@ -29,9 +28,9 @@ static DataContainerSingleton* _theDataContainerSingleton = nil;
 }
 
 //-----------------------------------------------------------------------------------------------------------
-#pragma mark -
-#pragma mark	instance methods
+#pragma mark - instance methods
 //-----------------------------------------------------------------------------------------------------------
+
 - (id)init
 {
     self = [super init];

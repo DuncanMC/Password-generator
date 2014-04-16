@@ -12,18 +12,12 @@
 
 @interface DataContainerSingleton : NSObject 
 {
-  
-  NSArray* wordList;
-  
-@private
-    
 }
 
-@property (nonatomic, retain) NSArray* wordList;
+@property (nonatomic, strong) NSArray* wordList;
 
 //-----------------------------------------------------------------------------------------------------------
-#pragma mark -
-#pragma mark	Class methods
+#pragma mark - Class methods
 //-----------------------------------------------------------------------------------------------------------
 
 + (DataContainerSingleton*) theDataContainerSingleton;

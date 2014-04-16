@@ -12,5 +12,17 @@
 {
   
   __weak IBOutlet UITextView *theTextView;
+  __weak IBOutlet UITextField* valueField;
+  
+  id showKeyboardHandler;
+  id hideKeyboardHandler;
+  id showPasswordsHandler;
+  
+  CGFloat keyboardSlideDuration;
+  CGFloat keyboardShiftAmount;
+  NSUInteger keyboardAnimationCurve;
 }
+
+- (IBAction) make_passwords: (id) sender;
+
 @end

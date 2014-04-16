@@ -26,13 +26,21 @@
 
 + (NSString*) applicationDocumentsDirectory;
 
++ (NSString *) create_n_passwords: (NSUInteger) count;
+
++ (void) alertWithMessage: (NSString*) message
+										title: (NSString*) title
+                 delegate: (id) delegate;
 
 //-----------------------------------------------------------------------------------------------------------
 #pragma mark -
 #pragma mark	instance methods
 //-----------------------------------------------------------------------------------------------------------
-- (void) loadWordList;
 
-- (BOOL) onetimeSetup;
+- (NSString*) a_password;
+
+- (BOOL) loadWordList;
+
+- (NSString *) createWordsPlist;
 
 @end
